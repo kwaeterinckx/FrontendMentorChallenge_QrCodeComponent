@@ -1,0 +1,76 @@
+/* Custom Properties */
+:root {
+    /* Colors */
+    --clr-body: hsl(212, 45%, 89%);
+    --clr-light: hsl(220, 15%, 55%);
+    --clr-dark: hsl(218, 44%, 22%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --ff-body: "Outfit", sans-serif;
+
+    /* Font sizes */
+    --fs-body: 15px;
+}
+
+/* Styling */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--fs-body);
+}
+
+body {
+    background-color: var(--clr-body);
+    font-family: var(--ff-body);
+    color: var(--clr-dark);
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.card {
+    margin: 1rem;
+    width: calc(375px - 2rem);
+    background-color: var(--clr-white);
+    padding: 1rem 1rem 3rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    box-shadow: .25rem .25rem 2rem 0 rgba(0 0 0 / 0.125);
+}
+
+img {
+    display: block;
+    border-radius: .5rem;
+    max-width: 100%;
+}
+
+:is(p, h1) {
+    text-align: center;
+    padding-inline: 1rem;
+}
+
+h1 {
+    font-size: 1.625rem;
+}
+
+p {
+    color: var(--clr-light);
+    font-size: 1.125rem;
+}
+
+/* Attribution placement */
+.attribution {
+    position: absolute;
+    bottom: 2rem;
+}
